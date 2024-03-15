@@ -47,6 +47,7 @@ const gerarInformacoes = () => {
       obterVentoAtual(data)
       console.log(data);
       obterBandeiraPais()
+      obterTempoMinimoEmaximo(data)
     }
   })
   .catch(error => console.error('Erro:', error));
@@ -58,7 +59,7 @@ button.addEventListener("click", () => {
 })
 
 const obterBandeiraPais = () => {
-  const bandeiraPais = document.getElementById("bandeiraPais") as HTMLImageElement
+  const bandeiraPais = document.getElementById("bandeiraP") as HTMLImageElement
   fetch(`https://restcountries.com/v3.1/alpha/${sys}`)
   .then(response => response.json())
   .then(data => {
@@ -69,3 +70,10 @@ const obterBandeiraPais = () => {
   })
 }
 
+ 
+const obterTempoMinimoEmaximo = (data: any) => {
+  const tempoMaximo = data.main.temp_max
+  const tempoMinimo = data.main.temp_min
+  console.log(`tempo minimo ${tempoMinimo}, tempo maximo ${tempoMaximo}`);
+  return data
+}
