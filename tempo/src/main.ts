@@ -74,6 +74,9 @@ const obterBandeiraPais = () => {
 const obterTempoMinimoEmaximo = (data: any) => {
   const tempoMaximo = data.main.temp_max
   const tempoMinimo = data.main.temp_min
-  console.log(`tempo minimo ${tempoMinimo}, tempo maximo ${tempoMaximo}`);
+  const valorTempoMaximoEmC = tempoMaximo - 273.15
+  const valorTempoMinimoEmC = tempoMinimo - 273.15
+  
+  console.log(`tempo minimo ${valorTempoMinimoEmC}, tempo maximo ${valorTempoMaximoEmC}`);
   return data
 }
