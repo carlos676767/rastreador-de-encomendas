@@ -16,22 +16,24 @@ const obterPaisENomeCidade = (data: any) => {
     const sys = data.sys.country
     const city = data.name
     console.log(sys, city);
-    
     return data
+}
 
+
+const obterIcone = (data: any) => {
+  const iconCode = data
+  imagem.src = iconCode
+  console.log(iconCode);
+  return data
 }
 
 const gerarFrase = () => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=af1f563fdce202604e28dada8fafdc47`)
   .then(response => response.json())
   .then(data => {
-
     obterPaisENomeCidade(data)
     converterTempereatura(data)
-    const iconCode = data
-    imagem.src = iconCode
-    console.log(iconCode);
-    
+    obterIcone(data)
   })
   .catch(error => console.error('Erro:', error));
 };
