@@ -27,6 +27,16 @@ const validaoInput = (city:string) => {
   return city === ''
 }
 
+const obterVentoAtual = (data: any) => {
+  const obterVento = data.wind.speed
+  console.log(obterVento);
+  
+  return data
+
+  
+}
+
+
 const gerarFrase = () => {
   const cidaDE = document.querySelector("input")  as HTMLInputElement
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cidaDE.value}&appid=af1f563fdce202604e28dada8fafdc47`)
@@ -38,6 +48,9 @@ const gerarFrase = () => {
       obterPaisENomeCidade(data)
       converterTempereatura(data)
       obterIcone(data)
+      obterVentoAtual(data)
+      console.log(data);
+      
     }
   })
   .catch(error => console.error('Erro:', error));
