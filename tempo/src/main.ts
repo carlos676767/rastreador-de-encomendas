@@ -9,7 +9,7 @@ const obterPaisENomeCidade = (data: any) => {
 const mostrarCity = document.getElementById("mostrarCity") as HTMLParagraphElement
   sys = data.sys.country;
   const city = data.name;
-  mostrarCity.innerHTML = `${city}, ${sys}  <img src="" alt="bandeira" id="bandeiraP">`
+  mostrarCity.innerHTML = ` ${city}, ${sys}   <img src="" alt="bandeira" id="bandeiraP">`
   console.log(sys, city);
   return { data };
 };
