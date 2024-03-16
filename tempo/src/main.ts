@@ -34,13 +34,15 @@ const obterVentoAtual = (data: any) => {
   return data;
 };
 
+
+
 const gerarInformacoes = () => {
   const cidaDE = document.querySelector("input") as HTMLInputElement;
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cidaDE.value}&appid=af1f563fdce202604e28dada8fafdc47`)
     .then((response) => response.json())
     .then((data) => {
       if (validaoInput(cidaDE.value)) {
-       p.innerHTML = `O input esta vazio`
+        exibirMensagem()
       } else {
         obterPaisENomeCidade(data);
         converterTempereatura(data);
@@ -90,3 +92,8 @@ const obterhumidade = (data: any) => {
   exibirhumidade.innerHTML = `${humidade}%`
   return data
 }
+
+
+const exibirMensagem = () => {
+  p.innerHTML = `O input esta vazio`;
+};
