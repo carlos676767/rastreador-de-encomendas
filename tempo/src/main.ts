@@ -1,5 +1,6 @@
+const p = document.getElementById("texto") as HTMLParagraphElement;
 const converterTempereatura = (data: any) => {
-  const p = document.getElementById("texto") as HTMLParagraphElement;
+ 
   const kelvin = data.main.temp;
   const celsus = kelvin - 273.15;
   p.innerHTML =  `<img src="" alt="icone" id="icone"> ${celsus.toFixed(2)}°C `;
@@ -39,7 +40,7 @@ const gerarInformacoes = () => {
     .then((response) => response.json())
     .then((data) => {
       if (validaoInput(cidaDE.value)) {
-        alert("Digite um nome de cidade");
+       p.innerHTML = `O input esta vazio`
       } else {
         obterPaisENomeCidade(data);
         converterTempereatura(data);
