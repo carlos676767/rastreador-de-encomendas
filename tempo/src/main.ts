@@ -48,6 +48,7 @@ const gerarInformacoes = () => {
         console.log(data);
         obterBandeiraPais();
         obterTempoMinimoEmaximo(data);
+        obterhumidade(data)
       }
     })
     .catch((error) => console.error("Erro:", error));
@@ -81,3 +82,10 @@ const obterTempoMinimoEmaximo = (data: any) => {
   min.innerHTML =  `${valorTempoMinimoEmC.toFixed(2)}°C`
   return data;
 };
+
+const obterhumidade = (data: any) => {
+  const exibirhumidade = document.getElementById("exibirhumidade") as HTMLParagraphElement
+  const humidade = data.main.humidity
+  exibirhumidade.innerHTML = `${humidade}%`
+  return data
+}

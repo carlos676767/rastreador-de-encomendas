@@ -79,6 +79,7 @@ input{
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px;
 
 }
 
@@ -98,7 +99,7 @@ input{
   flex-direction: column;
 }
 
-.tempMax, .ventoatual{
+.tempMax, .ventoatual, .humidadeatual{
   font-size: 10px;
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -114,15 +115,16 @@ input{
   flex-direction: column;
 }
 
-#max, #min, #exibirVento{
+#max, #min, #exibirVento, #exibirhumidade{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   font-size: 13px;
 }
 
-.fa-temperature-empty{
+.fa-temperature-empty, .fa-water{
   color: #87CEFA;
 }
 .fa-wind{
   color: darkviolet;
 }
+
