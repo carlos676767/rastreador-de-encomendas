@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Previsao do tempo</title>
     <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
     <main>
-      <div>
-        <input type="text">
-        <button>enviar</button>
-        <p></p>
-        <img src="" alt="">
-        <img src="" alt="" id="bandeiraP">
+  
+      <div class="filha">
+       <label for="text"><i class="fa-solid fa-location-dot"></i> <input type="text"><button><i class="fa-solid fa-magnifying-glass"></i></button></label>
+        <div class="city">
+        <p id="mostrarCity"></p>
+        </div>
+        <div class="resultados">
+          <p id="texto"></p>
+        </div>
       </div>
     </main>
-    <div id="app"></div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
