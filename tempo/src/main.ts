@@ -26,7 +26,9 @@ const validaoInput = (city: string) => {
 };
 
 const obterVentoAtual = (data: any) => {
+  const exibirVento = document.getElementById("exibirVento") as HTMLParagraphElement
   const obterVento = data.wind.speed;
+  exibirVento.innerHTML = `${obterVento}Km/h`
   console.log(obterVento);
   return data;
 };
