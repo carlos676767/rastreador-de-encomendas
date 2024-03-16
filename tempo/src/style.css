@@ -30,7 +30,7 @@ body{
 
 
 
-label{
+.label{
   background-color: white;
   padding: 5px;
   border-radius: 5px;
@@ -74,4 +74,48 @@ button{
 input{
   border: none;
   outline: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+
+}
+
+.grid-item {
+  background-color:   #5B75D7;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fa-temperature-three-quarters{
+  color: red;
+}
+
+.tempomaximo{
+  display: flex;
+  flex-direction: column;
+}
+
+.tempMax{
+  font-size: 10px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.labelmax{
+  display: flex;
+  justify-content: center;
+
+}
+
+#max, #min{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 13px;
+}
+
+.fa-temperature-empty{
+  color: #87CEFA;
 }

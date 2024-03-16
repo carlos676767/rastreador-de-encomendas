@@ -69,12 +69,13 @@ const obterBandeiraPais = () => {
 };
 
 const obterTempoMinimoEmaximo = (data: any) => {
+  const max = document.getElementById("max") as HTMLParagraphElement
+  const min = document.getElementById("min") as HTMLParagraphElement
   const tempoMaximo = data.main.temp_max;
   const tempoMinimo = data.main.temp_min;
   const valorTempoMaximoEmC = tempoMaximo - 273.15;
+  max.innerHTML = `${valorTempoMaximoEmC.toFixed(2)}°C`
   const valorTempoMinimoEmC = tempoMinimo - 273.15;
-  console.log(
-    `tempo minimo ${valorTempoMinimoEmC}, tempo maximo ${valorTempoMaximoEmC}`
-  );
+  min.innerHTML =  `${valorTempoMinimoEmC.toFixed(2)}°C`
   return data;
 };
